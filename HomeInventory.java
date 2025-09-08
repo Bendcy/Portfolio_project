@@ -121,5 +121,6 @@ public class HomeInventory {
         } else {
             System.out.println("Inventory not printed to file.");
         }
+        scanner.close();
     }
 }
