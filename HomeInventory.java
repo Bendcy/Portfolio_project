@@ -38,6 +38,7 @@ public class HomeInventory {
         }
     }
 
+    // Update home details by address
     public String updateHome(String address, int squareFeet, String city, String state, int zipCode, String modelName, String saleStatus) {
         try {
             for (Home home : homes) {
@@ -57,6 +58,7 @@ public class HomeInventory {
         }
     }
 
+    // List all homes in inventory
     public void listHomes() {
         if (homes.isEmpty()) {
             System.out.println("No homes in inventory.");
@@ -67,6 +69,7 @@ public class HomeInventory {
         }
     }
 
+    // Print inventory to a file
     public String printToFile(String filePath) {
         try (FileWriter writer = new FileWriter(filePath)) {
             for (Home home : homes) {
@@ -78,6 +81,7 @@ public class HomeInventory {
         }
     }
 
+    // Main method for testing
     public static void main(String[] args) {
         HomeInventory inventory = new HomeInventory();
         inventory.newHome(2500, "123 Main St", "Springfield", "IL", 62701, "Model A", "For Sale");
